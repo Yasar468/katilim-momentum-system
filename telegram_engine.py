@@ -2,7 +2,7 @@ import requests
 import os
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 def send_telegram(message):
 
@@ -20,4 +20,5 @@ def send_telegram(message):
     try:
         requests.post(url, data=payload)
     except:
+
         print("Telegram mesajı gönderilemedi.")
