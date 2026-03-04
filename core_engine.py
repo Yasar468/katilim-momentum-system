@@ -339,13 +339,16 @@ def run_system():
 
     if report_message:
         send_telegram(report_message)
+
+        from github_backup import upload_file
+
+        upload_file("equity_history.csv")
+        upload_file("performance_log.csv")
+        upload_file("portfolio_state.csv")
  
 
-if __name__ == "__main__":
-    run_system()
+    if __name__ == "__main__":
+        run_system()
 
-from github_backup import upload_file
 
-upload_file("equity_history.csv")
-upload_file("performance_log.csv")
-upload_file("portfolio_state.csv")
+
