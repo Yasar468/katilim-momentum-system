@@ -27,7 +27,8 @@ def upload_file(path):
 
     data = {
         "message": f"auto update {filename}",
-        "content": content
+        "content": content,
+        "branch": "main"
     }
 
     if sha:
