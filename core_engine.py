@@ -336,6 +336,7 @@ def run_system():
     report_message = generate_daily_report()
 
     print("DEBUG:", report_message)
+    print("DEBUG REPORT LENGTH:", len(report_message) if report_message else "EMPTY")
 
     if report_message:
         send_telegram(report_message)
