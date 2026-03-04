@@ -34,4 +34,6 @@ def upload_file(path):
     if sha:
         data["sha"] = sha
 
-    requests.put(url, json=data, headers=headers)
+    response = requests.put(url, json=data, headers=headers)
+    print("GITHUB STATUS:", response.status_code)
+    print("GITHUB RESPONSE:", response.text)
